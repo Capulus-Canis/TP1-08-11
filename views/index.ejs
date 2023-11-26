@@ -5,27 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Home</title>
+    <title>Conectando a cidade</title>
+    <link rel="stylesheet" href="../public/style.css" type="text/css">
 </head>
 
 <body>
-    <%- include ('inicio')%>
-        <div class="titulo">
-            <h1>Horarios de Transportes
-                Públicos<br>
-            </h1>
-        </div>
+    <div class="titulo">
+        <h1>Horarios de Transportes Públicos</h1>
+    </div>
+    <div >
+        <a href="/passagem">Passagem</a>
+        <br>
+        <a href="/visgueiro">Praia do Visgueiro</a>
+        <br>
+        <a href="/JF">Praia de João Francisco</a>
+        <br>
+        <a href="/barra">Praia de Barra do Furado</a>
+    </div>
 
-        <div class="subtitulo">
-            <section class="subtitulo">
-
+    <div class="cxhorario">
+        <section class="titulocx">
+        Horário
+        João Francisco
+        </section>
+     
+        <section class="txt">
+            06:00 AM
+            12:00 PM
+            05:00 PM   
+        </section>
+        <section class="titulocx">
+            Horário
+            Visgueiro
             </section>
-
+         
             <section class="txt">
-
+                06:00 AM
+                12:00 PM
+                05:00 PM   
             </section>
-        </div>
+            <section class="titulocx">
+                Horário
+                Barra do Furado
+                </section>
+             
+                <section class="txt">
+                    06:00 AM
+                    12:00 PM
+                    05:00 PM   
+                </section>
+    </div>
 </body>
 
 </html>
