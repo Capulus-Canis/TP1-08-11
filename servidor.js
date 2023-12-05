@@ -33,10 +33,16 @@ app.post("/salvar", (req, res) => {
   let teluser = req.body.tel;
 
   let cd = { nm: nomeuser, loc: locuser, val: valuser, tel: teluser };
-
+  console.log(cd);
+  console.log("\n" + JSON.stringify(cd + ","));
   fileData.push(cd);
   resultado = fs.writeFileSync(`users.json`, JSON.stringify(fileData));
-  res.render("ty", { resultado });
+  res.redirect('/ler')
+});
+app.get("/ler", (req, res) => {
+  const dados = fs.readFileSync("users.json", "utf8");
+  const datajson = JSON.parse(dados)
+  res.render("confirm", { data: datajson });
 });
 console.log("servidor funcionando na porta:", port);
 app.listen(port);

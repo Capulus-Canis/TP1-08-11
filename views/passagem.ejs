@@ -9,35 +9,31 @@
 </head>
 
 <body>
-    <form action="/salvar" method="post">
+    <div class="titulopg">
+        <img src="/public/logo.png" id="imagem">
+        <h1>Passagem</h1>
+    </div>
 
-        <div class="cxpassagem">
-            <section class="cxtexto">
-                <label for="nome">Nome:</label><br>
-                <input type="text" id="nm" name="nm"><br>
-            </section>
+    <%-include('nav')%>
+    <main>
 
-            <section class="cxtexto">
-                <label for="loc">Local:</label><br>
-                <input type="text" id="loc" name="loc"><br>
-            </section>
-
-            <section class="cxtexto">
-                <label for="val">Valor:</label><br>
-                <input type="text" id="val" name="val"><br>
-            </section>
-
-            <section class="cxtexto">
-                <label for="tel">Telefone:</label><br>
-                <input type="text" id="tel" name="tel"><br>
-            </section>
-            <input type="submit" id="sub">
-        </div>
-    </form>
+    
+        <form action="/salvar" method="post" class="passagem"> 
+            <label for="nome">Nome:</label> 
+            <input type="text" id="nome" name="nm" required>
+            <label for="local">Local:</label>
+            <input type="text" id="local" name="loc" required>
+         
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" name="val" min="2" required>
+         
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="tel" required>
+         
+            <input type="submit" value="Reservar Passagem" class="button">
+        </form>
+    </main>
+    <%-include('rodape')%>
 </body>
 
 </html>
-
-<tt><a href="/">
-        <h2>Voltar</h2>
-    </a></tt>
